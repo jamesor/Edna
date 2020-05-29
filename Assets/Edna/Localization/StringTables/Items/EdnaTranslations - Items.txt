@@ -1,0 +1,4 @@
+key	context	English(en)	Spanish(es)	Italian(it)	French(fr)	German(de)	Russian(ru)
+!!_IGNORE_!!	This line hold translation formula	Test	Tester	Test	Tester	Prüfung	Тестовое задание
+EMPTYBOX	A cardboard box	Cardboard Box	Boîte en carton	Scatola di cartone	Boîte en carton	Pappkarton	Картонная коробка
+EMPTYBOX_LOOK	Item Description	An empty cardboard box.	Una caja de cartón vacía.	Una scatola di cartone vuota.	Une boîte de carton vide.	Ein leerer Karton.	Пустая картонная коробка.

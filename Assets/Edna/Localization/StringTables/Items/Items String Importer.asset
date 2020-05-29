@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32b95aa615395964cb245d2f138331b4, type: 3}
+  m_Name: Items String Importer
+  m_EditorClassIdentifier: 
+  SharedTable: {fileID: 11400000, guid: a9ee9eb3dfce895489c8f93d1b4da217, type: 2}
+  StringTables:
+  - {fileID: 11400000, guid: ec79cec7a466a004abdc326702240c20, type: 2}
+  - {fileID: 11400000, guid: 8353400ba74095a42b8faaf57c811631, type: 2}
+  - {fileID: 11400000, guid: cce0cd158c1c8f74eb45c3965ccc789d, type: 2}
+  - {fileID: 11400000, guid: c18dbc7c265ad294d8f32173489c44ff, type: 2}
+  - {fileID: 11400000, guid: f1e3b5337e5e46d42b3bf83ba7e13282, type: 2}
+  - {fileID: 11400000, guid: 01bbc6199b222eb488064af0959d9538, type: 2}
+  TabDelimitedFile: {fileID: 4900000, guid: e2ca925b8823a854b9095730886383c2, type: 3}

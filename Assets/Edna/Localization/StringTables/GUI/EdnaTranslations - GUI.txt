@@ -1,0 +1,35 @@
+key	context	English(en)	Spanish(es)	Italian(it)	French(fr)	German(de)	Russian(ru)
+!!_IGNORE_!!	This line hold translation formula	Test	Prueba	Test	Tester	Prüfung	Тестовое задание
+INVENTORY	Button Label	Inventory	Inventario	Inventario	Inventaire	Inventar	Инвентарь
+NEW_GAME	Button Label	New Game	Nuevo Juego	Nuovo gioco	Nouveau jeu	Neues Spiel	Новая Игра
+LOAD_GAME	Button Label	Load Game	Cargar Partida	Carica partita	Chargement du jeu	Spiel laden	Загрузить Игру
+CONTINUE_GAME	Button Label	Continue Game	Continua el Juego	Continuare Gioco	Continuer Jeu	Weiterspielen	Продолжить Игру
+END_GAME	Button Label	End Game	Fin del Juego	Fine del Gioco	Fin du jeu	Spiel beenden	Конец Игры
+SETTINGS	Button Label	Settings	Ajustes	impostazioni	Réglages	Die Einstellungen	Настройки
+QUIT	Button Label	Quit	Dejar	Smettere	Quitter	Verlassen	Уволиться
+MAIN_MENU	Button Label	Main Menu	Menú Principal	Menu principale	Menu principal	Hauptmenü	Главное Mеню
+BACK	Button Label - Return to Previous Screen	Back	Atrás	Indietro	Retour	Zurück	Назад
+LOAD_TITLE	Screen Title - Screen to Load and Save Games	Load and Save	Cargar y Guardar	Carica e Salva	Charger et Sauvegarder	Laden und Speichern	Загрузка и Cохранение
+SETTINGS_TITLE	Screen Title - Screen to Change Settings	Settings	Ajustes	impostazioni	Réglages	Die Einstellungen	Настройки
+SOUND_SETTINGS	Button Group Title	Sound Settings	Ajustes de Sonido	Impostazioni Audio	Réglages du Son	Toneinstellungen	Настройки Звука
+GRAPHICS_SETTINGS	Button Group Title	Graphics Settings	Configuración de Gráficos	Impostazioni Grafiche	Paramètres Graphiques	Grafikeinstellungen	Графика Настройки
+GAME_SETTINGS	Button Group Title	Game Settings	Configuraciones de Juego	Impostazioni di Gioco	Paramètres de Jeu	Spieleinstellungen	Настройки игры
+MUSIC_VOLUME	Slider Label	Music Volume	Volumen de la Música	Volume Musica	Volume de la Musique	Musiklautstärke	Громкость Mузыки
+MASTER_VOLUME	Slider Label	Master Volume	Volumen Principal	Volume Principale	Master Volume	Master Volume	Основной Объем
+EFFECTS_VOLUME	Slider Label	Effects Volume	Efectos de Volumen	Effetti Volume	Effets Volume	Effects Volume	эффекты Громкости
+SPEECH_VOLUME	Slider Label	Speech Volume	Volumen de Voz	Discorso Volume	Discours Volume	Speech Volume	Речь Громкости
+SCREEN_RESOLUTION	Dropdown Label	Screen Resolution	Resolución de la Pantalla	Risoluzione Dello Schermo	Résolution D'écran	Bildschirmauflösung	Разрешение экрана
+GRAPHICS_QUALITY	Dropdown Label	Graphics Quality	Calidad de los Gráficos	Qualità Grafica	Qualité Graphique	Grafikqualität	Качество Графики
+CURSOR_SIZE	Dropdown Label	Cursor Size	Tamaño del Cursor	Cursore Size	Taille du Curseur	Cursor Größe	Курсор Размер
+SUBTITLES	Checkbox Label	Subtitles	Subtítulos	Sottotitoli	Les Sous-titres	Untertitel	Субтитры
+GAME_HINTS	Checkbox Label	Game Hints	Sugerencias Juego	Suggerimenti di Gioco	Conseils de Jeu	Spiel Hinweise	Игровые Советы
+HIGH	Dropdown Choice (Quality)	High	Alto	Aalto	Haute	Hoch	большой
+MEDIUM	Dropdown Choice (Quality)	Medium	Medio	Medio	Moyen	Mittel	Средний
+LOW	Dropdown Choice (Quality)	Low	Bajo	Basso	Bas	Niedrig	Низкий
+LARGE_GRAPHICS	Dropdown Choice (Quality)	Large Graphics	Gráficos de Gran	Grafica di Grandi Dimensioni	Graphiques Grand	große Grafik	Большая Графика
+SMALL_GRAPHICS	Dropdown Choice (Quality)	Small Graphics	Los Gráficos Pequeños	Piccola Grafica	Petit Graphics	kleine Grafik	Малый График
+NO_GRAPHICS	Dropdown Choice (Quality)	No Graphics	Sin Gráficos	Senza Grafica	Aucun Graphique	Nein Grafik	Нет Графика
+LOAD	Button Label - Load a Saved Game	Load	Carga	Caricare	Charge	Belastung	Hагрузка
+SAVE	Button Label - Save a Game	Save	Salvar	Salva	Sauver	Speichern	Сохранить
+NEW_SAVEGAME	Button Label - Create New Savegame Slot	New Save	Nueva Guardar	Nuovo Salva	Nouveau Enregistrer	Neu Speichern	Новый Сохранить
+LANGUAGE	Dropdown Choice	Language	Idioma	Linguaggio	Langue	Sprache	Язык
