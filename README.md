@@ -8,6 +8,7 @@ Edna is a starter kit for creating point-and-click adventure type games with Uni
     * Main Menu: Continue Game, Start New Game, Load Game, Settings, Quit 
     * Load Game: Main Menu, Save New Game, Load Existing Game
     * Settings: Sound Settings, Graphics Settings, Game Settings
+* **Edna Demo:** A demonstration of a pont-n-click adventure game built using Edna. While the demo is small, it showcases every feature available.
 
 ## Installation
 
