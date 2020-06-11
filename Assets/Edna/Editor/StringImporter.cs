@@ -112,10 +112,12 @@ namespace JamesOR.EdnaEditor
             base.OnInspectorGUI();
             var script = (StringImporter)target;
 
+            GUILayout.BeginHorizontal();
             if (GUILayout.Button("Import Language Strings", GUILayout.Height(40)))
             {
                 script.Import();
             }
+            GUILayout.EndHorizontal();
         }
     }
 }

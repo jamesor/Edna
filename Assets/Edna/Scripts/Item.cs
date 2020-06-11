@@ -15,11 +15,11 @@ namespace JamesOR.Edna
         public LocalizedString StringReferenceName = new LocalizedString();
         public LocalizedString StringReferenceLook = new LocalizedString();
 
-        private string m_Name = "Unnamed";
-        public string Name { get => m_Name; }
+        private string m_name = "Unnamed";
+        public string Name { get => m_name; }
 
-        private string m_Description = "";
-        public string Description { get => m_Description; }
+        private string m_description = "";
+        public string Description { get => m_description; }
 
         private void OnEnable()
         {
@@ -47,12 +47,12 @@ namespace JamesOR.Edna
 
         private void UpdateName(string value)
         {
-            m_Name = value;
+            m_name = value;
         }
 
         private void UpdateDescription(string value)
         {
-            m_Description = value;
+            m_description = value;
         }
     }
 }
