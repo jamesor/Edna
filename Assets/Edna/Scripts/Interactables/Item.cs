@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Localization;
 
-namespace JamesOR.Edna
+namespace JamesOR.Edna.Interactables
 {
     [CreateAssetMenu(fileName = "New Item", menuName = "Edna/Interactables/Item")]
     public class Item : ScriptableObject

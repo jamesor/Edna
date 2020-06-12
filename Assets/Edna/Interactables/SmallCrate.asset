@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4158dfe65b34b5f43bb0cdd065e9e341, type: 3}
   m_Name: SmallCrate
   m_EditorClassIdentifier: 
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 9ab0b02af30c60544b8e94b9dab5fd2a, type: 3}
   IsReusable: 1
   IsDefaultItem: 0
   StringReferenceName:

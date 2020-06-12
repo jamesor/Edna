@@ -1,7 +1,6 @@
 ﻿using System;
 using JamesOR.Edna.Interactables;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace JamesOR.Edna.Player
@@ -24,6 +23,7 @@ namespace JamesOR.Edna.Player
     public class PlayerController : MonoBehaviour
     {
         public Interactable Focused;
+        public Inventory Inventory = new Inventory();
 
         private Camera m_camera;
         private PlayerMotor m_motor;
@@ -92,7 +92,6 @@ namespace JamesOR.Edna.Player
                     }
                     else
                     {
-                        Debug.Log(hit.point);
                         m_motor.MoveToPoint(hit.point);
                         RemoveFocus();
                     }
@@ -135,7 +134,7 @@ namespace JamesOR.Edna.Player
                 switch (m_deferredAction)
                 {
                     case ActionType.Take:
-                        if (Focused.Take())
+                        if (Focused.Take() && Inventory.Add(Focused.Item))
                         {
                             Destroy(Focused.gameObject);
                         }
