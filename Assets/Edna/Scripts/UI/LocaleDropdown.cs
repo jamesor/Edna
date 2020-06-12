@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
 
-namespace JamesOR.Edna
+namespace JamesOR.Edna.UI
 {
     public class LocaleDropdown : MonoBehaviour
     {

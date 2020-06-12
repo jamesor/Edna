@@ -1,9 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace JamesOR.Edna
+namespace JamesOR.Edna.UI
 {
     public class LoadSaveData
     {

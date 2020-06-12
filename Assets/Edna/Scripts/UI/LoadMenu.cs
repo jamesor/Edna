@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-namespace JamesOR.Edna
+namespace JamesOR.Edna.UI
 {
     public class LoadMenu : MonoBehaviour
     {
