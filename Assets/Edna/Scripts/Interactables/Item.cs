@@ -3,13 +3,18 @@ using UnityEngine.Localization;
 
 namespace JamesOR.Edna.Interactables
 {
+    public enum ItemKey { SmallCrate, SecretBookcase, PressurePlate }
+
+
     [CreateAssetMenu(fileName = "New Item", menuName = "Edna/Interactables/Item")]
     public class Item : ScriptableObject
     {
         [Header("Item Info")]
+        public ItemKey Key;
         public Sprite Icon = null;
         public bool IsReusable = true;
         public bool IsDefaultItem = false;
+        public GameObject Prefab;
 
         [Header("Localization")]
         public LocalizedString StringReferenceName = new LocalizedString();

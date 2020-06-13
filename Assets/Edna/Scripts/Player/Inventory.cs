@@ -15,6 +15,11 @@ namespace JamesOR.Edna.Player
     public class InventoryEvtArgs : EventArgs
     {
         public List<Item> Items { get; set; }
+
+        public InventoryEvtArgs()
+        {
+            Items = new List<Item>();
+        }
     }
 
     public class Inventory
@@ -50,7 +55,7 @@ namespace JamesOR.Edna.Player
                 return false;
             }
 
-            Debug.Log(item.name + " added to the Inventory.");
+            // Debug.Log(item.name + " added to the Inventory.");
             Items.Add(item);
 
             InventoryEvtArgs args = new InventoryEvtArgs();
@@ -70,7 +75,6 @@ namespace JamesOR.Edna.Player
 
             if (Items.Remove(item))
             {
-                Debug.Log(item.name + " removed from the Inventory.");
                 InventoryEvtArgs args = new InventoryEvtArgs();
                 args.Items = Items;
                 EventManager.TriggerEvent(InventoryEvtType.Changed, args);

@@ -18,12 +18,29 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 1
-    m_Localized: Scatola di cartone
+  - m_Id: 7
+    m_Localized: piccola cassa
     m_Metadata:
       m_Items: []
-  - m_Id: 2
-    m_Localized: Una scatola di cartone vuota.
+  - m_Id: 8
+    m_Localized: "Un piccolo cubo di metallo, che non pu\xF2 essere aperto. E 'pesante
+      per le sue dimensioni."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: Libreria
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: E 'uno scaffale che tiene i libri.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Pedana a pressione
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Un quadrato metallo piatta.
     m_Metadata:
       m_Items: []
   references:

@@ -18,12 +18,29 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 1
-    m_Localized: Pappkarton
+  - m_Id: 7
+    m_Localized: kleine Kiste
     m_Metadata:
       m_Items: []
-  - m_Id: 2
-    m_Localized: Ein leerer Karton.
+  - m_Id: 8
+    m_Localized: "Ein kleiner Metallw\xFCrfel, die nicht ge\xF6ffnet werden k\xF6nnen.
+      Es ist schwer f\xFCr seine Gr\xF6\xDFe."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: "B\xFCcherregal"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: "Es ist ein Regal, das Buch h\xE4lt."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Druckplatte
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: Ein flaches Metall Quadrat.
     m_Metadata:
       m_Items: []
   references:

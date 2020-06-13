@@ -19,11 +19,21 @@ namespace JamesOR.Edna.Player
         public Item Item { get; set; }
     }
 
+    public class PlayerMoveEvtType
+    {
+        public static string MoveToPoint = "PlayerMotor.OnMoveToPoint";
+    }
+
+    public class PlayerMoveEvtArgs : EventArgs
+    {
+        public Vector3 point { get; set; }
+    }
+
     [RequireComponent(typeof(PlayerMotor))]
     public class PlayerController : MonoBehaviour
     {
         public Interactable Focused;
-        public Inventory Inventory = new Inventory();
+        public Inventory Inventory;
 
         private Camera m_camera;
         private PlayerMotor m_motor;
@@ -38,6 +48,7 @@ namespace JamesOR.Edna.Player
             EventManager.StartListening(PlayerControllerEvtType.HoldItem, OnHoldItem);
             EventManager.StartListening(PlayerControllerEvtType.ReleaseItem, OnReleaseItem);
             EventManager.StartListening(PlayerControllerEvtType.LookAtItem, OnLookAtItem);
+            EventManager.StartListening(PlayerMoveEvtType.MoveToPoint, OnMoveToPoint);
             EventManager.StartListening(PlayerMotorEvtType.ReachedDestination, OnReachDestination);
         }
 
@@ -46,6 +57,7 @@ namespace JamesOR.Edna.Player
             EventManager.StopListening(PlayerControllerEvtType.HoldItem, OnHoldItem);
             EventManager.StopListening(PlayerControllerEvtType.ReleaseItem, OnReleaseItem);
             EventManager.StopListening(PlayerControllerEvtType.LookAtItem, OnLookAtItem);
+            EventManager.StopListening(PlayerMoveEvtType.MoveToPoint, OnMoveToPoint);
             EventManager.StopListening(PlayerMotorEvtType.ReachedDestination, OnReachDestination);
         }
 
@@ -53,6 +65,7 @@ namespace JamesOR.Edna.Player
         {
             m_camera = Camera.main;
             m_motor = GetComponent<PlayerMotor>();
+            Inventory = new Inventory();
         }
 
         private void Update()
@@ -71,13 +84,20 @@ namespace JamesOR.Edna.Player
                 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    //Debug.Log("We hit " + hit.collider.name + " at " + hit.point);
+                    // Debug.Log("We hit " + hit.collider.name + " at " + hit.point);
                     Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
                     if (interactable != null && interactable.Item != null)
                     {
                         if (m_itemBeingHeld == null)
                         {
-                            m_deferredAction = ActionType.Take;
+                            if (interactable.IsTakeable())
+                            {
+                                m_deferredAction = ActionType.Take;
+                            }
+                            else if (interactable.IsUseable())
+                            {
+                                m_deferredAction = ActionType.Use;
+                            }
                         }
                         else
                         {
@@ -85,6 +105,10 @@ namespace JamesOR.Edna.Player
                             if (isItemsUseableHere)
                             {
                                 m_deferredAction = ActionType.Use;
+                            }
+                            else
+                            {
+                                return;
                             }
                         }
 
@@ -112,7 +136,7 @@ namespace JamesOR.Edna.Player
 
                 if (Physics.Raycast(ray, out hit))
                 {
-                    //Debug.Log("We hit " + hit.collider.name + " at " + hit.point);
+                    // Debug.Log("We hit " + hit.collider.name + " at " + hit.point);
                     Interactable interactable = hit.collider.gameObject.GetComponent<Interactable>();
                     if (interactable == null)
                     {
@@ -218,6 +242,15 @@ namespace JamesOR.Edna.Player
             {
                 PlayerControllerEvtArgs evt = (PlayerControllerEvtArgs)e;
                 LookAtItem(evt.Item);
+            }
+        }
+
+        private void OnMoveToPoint(EventArgs e)
+        {
+            if (e is PlayerMoveEvtArgs)
+            {
+                PlayerMoveEvtArgs evt = (PlayerMoveEvtArgs)e;
+                m_motor.MoveToPoint(evt.point);
             }
         }
         #endregion

@@ -16,28 +16,29 @@ namespace JamesOR.Edna.Interactables
             }
         }
 
+        public virtual bool IsTakeable()
+        {
+            return false;
+        }
+
         public virtual bool Take()
+        {
+            return false;
+        }
+
+        public virtual bool IsUseable()
         {
             return false;
         }
 
         public virtual bool Use(Item item)
         {
-            if (!item.IsReusable)
-            {
-                // TODO: Remove item from inventory
-            }
-
-            Debug.Log("Use " + item.name + " on " + Item.name);
-
             return false;
         }
 
         public virtual bool CanBeUsedWith(Item item)
         {
-            // TODO
-
-            return true;
+            return false;
         }
 
         private void OnDrawGizmosSelected()

@@ -18,12 +18,29 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 1
-    m_Localized: "Bo\xEEte en carton"
+  - m_Id: 7
+    m_Localized: petit Crate
     m_Metadata:
       m_Items: []
-  - m_Id: 2
-    m_Localized: "Una caja de cart\xF3n vac\xEDa."
+  - m_Id: 8
+    m_Localized: "Un peque\xF1o cubo de metal, que no se puede abrir. Es pesado para
+      su tama\xF1o."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: "Biblioth\xE8que"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: "Il est une \xE9tag\xE8re qui tient des livres."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Plaque de pression
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: "Un carr\xE9 de m\xE9tal plat."
     m_Metadata:
       m_Items: []
   references:

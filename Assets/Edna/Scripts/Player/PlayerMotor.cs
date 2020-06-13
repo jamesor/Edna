@@ -42,6 +42,7 @@ namespace JamesOR.Edna.Player
                 {
                     if (!m_agent.hasPath || m_agent.velocity.sqrMagnitude == 0f)
                     {
+                        m_target = null;
                         m_reachedDestination = true;
                         EventManager.TriggerEvent(PlayerMotorEvtType.ReachedDestination, null);
                     }
@@ -58,17 +59,23 @@ namespace JamesOR.Edna.Player
 
         public void MoveToPoint(Vector3 point)
         {
-            m_reachedDestination = false;
-            m_agent.SetDestination(point);
+            if (point != null)
+            {
+                m_reachedDestination = false;
+                m_agent.SetDestination(point);
+            }
         }
 
         public void FollowTarget(Interactable newTarget)
         {
-            m_reachedDestination = false;
-            //agent.stoppingDistance = newTarget.radius * .2f;
-            m_agent.updateRotation = false;
+            if (newTarget != null)
+            {
+                m_reachedDestination = false;
+                //agent.stoppingDistance = newTarget.radius * .2f;
+                m_agent.updateRotation = false;
 
-            m_target = newTarget.InteractionTransform;
+                m_target = newTarget.InteractionTransform;
+            }
         }
 
         public void StopFollowingTarget()

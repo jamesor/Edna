@@ -18,12 +18,28 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 1
-    m_Localized: Cardboard Box
+  - m_Id: 7
+    m_Localized: Small Crate
     m_Metadata:
       m_Items: []
-  - m_Id: 2
-    m_Localized: An empty cardboard box.
+  - m_Id: 8
+    m_Localized: A small metal cube, that can't be opened. It's heavy for it's size.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3
+    m_Localized: Bookcase
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4
+    m_Localized: It's a shelf that holds books.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 5
+    m_Localized: Pressure Plate
+    m_Metadata:
+      m_Items: []
+  - m_Id: 6
+    m_Localized: A flat metal square.
     m_Metadata:
       m_Items: []
   references:

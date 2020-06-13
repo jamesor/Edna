@@ -6,24 +6,13 @@ namespace JamesOR.Edna.Interactables
 {
     public class SmallCrate : Interactable
     {
-        public override bool Take()
+        public override bool IsTakeable()
         {
             return true;
         }
 
-        public override bool Use(Item item)
+        public override bool Take()
         {
-            base.Use(item);
-
-            // TODO
-
-            return false;
-        }
-
-        public override bool CanBeUsedWith(Item item)
-        {
-            // TODO
-
             return true;
         }
     }

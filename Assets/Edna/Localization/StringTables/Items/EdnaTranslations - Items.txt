@@ -1,4 +1,8 @@
 key	context	English(en)	Spanish(es)	Italian(it)	French(fr)	German(de)	Russian(ru)
 !!_IGNORE_!!	This line hold translation formula	Test	Tester	Test	Tester	Prüfung	Тестовое задание
-EMPTYBOX	A cardboard box	Cardboard Box	Boîte en carton	Scatola di cartone	Boîte en carton	Pappkarton	Картонная коробка
-EMPTYBOX_LOOK	Item Description	An empty cardboard box.	Una caja de cartón vacía.	Una scatola di cartone vuota.	Une boîte de carton vide.	Ein leerer Karton.	Пустая картонная коробка.
+SMALL_CRATE	A small crate	Small Crate	petit Crate	piccola cassa	petit Crate	kleine Kiste	Малый Crate
+SMALL_CRATE_LOOK	Item Description	A small metal cube, that can't be opened. It's heavy for it's size.	Un pequeño cubo de metal, que no se puede abrir. Es pesado para su tamaño.	Un piccolo cubo di metallo, che non può essere aperto. E 'pesante per le sue dimensioni.	Un petit cube de métal, qui ne peut pas être ouvert. Il est lourd pour la taille de lui.	Ein kleiner Metallwürfel, die nicht geöffnet werden können. Es ist schwer für seine Größe.	Небольшой металлический куб, который не может быть открыт. Это тяжело для его размера.
+BOOKCASE	A shelf that holds books	Bookcase	Bibliothèque	Libreria	Bibliothèque	Bücherregal	этажерка
+BOOKCASE_LOOK	Item Description	It's a shelf that holds books.	Il est une étagère qui tient des livres.	E 'uno scaffale che tiene i libri.	Il est une étagère qui tient des livres.	Es ist ein Regal, das Buch hält.	Это полка, которая содержит книги.
+PRESSURE_PLATE	Pressure Plate	Pressure Plate	Plaque de pression	Pedana a pressione	Plaque de pression	Druckplatte	Прижимная плита
+PRESSURE_PLATE_LOOK	Item Description	A flat metal square.	Un carré de métal plat.	Un quadrato metallo piatta.	Un carré de métal plat.	Ein flaches Metall Quadrat.	Плоский металлический квадрат.

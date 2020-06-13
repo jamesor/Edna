@@ -22,87 +22,87 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 2de492d5c49bba24285d53230d4fd41c
     m_Address: GUI_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 2f6655b12e5d51d4da18b732a1869df7
     m_Address: GUI_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     - Preload
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 7dffbcc89fda79d4bb4803e35d172671
     m_Address: GUI_fr
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 8353400ba74095a42b8faaf57c811631
     m_Address: Items_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     - Preload
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: 9721da061cbdb714292cc915268ab17e
     m_Address: GUI_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: af95cc506ddc3ea46969cb25b07d5031
     m_Address: GUI_it
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-it
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: b06be8cd86ce1c94bbd96a619d959d19
     m_Address: GUI_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: c18dbc7c265ad294d8f32173489c44ff
     m_Address: Items_fr
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: cce0cd158c1c8f74eb45c3965ccc789d
     m_Address: Items_es
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: ec79cec7a466a004abdc326702240c20
     m_Address: Items_de
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   - m_GUID: f1e3b5337e5e46d42b3bf83ba7e13282
     m_Address: Items_it
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-it
-    m_mainAssetType: UnityEngine.Localization.Tables.StringTable, Unity.Localization,
-      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    m_MainAsset: {fileID: 0}
+    m_TargetAsset: {fileID: 0}
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 631d4c93f35a36f49a37f4f638be9223, type: 2}
   m_SchemaSet:
