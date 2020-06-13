@@ -35,7 +35,7 @@ namespace JamesOR.Edna.Player
         public Interactable Focused;
         public Inventory Inventory;
 
-        private Camera m_camera;
+        private UnityEngine.Camera m_camera;
         private PlayerMotor m_motor;
 
         private Item m_itemBeingHeld;
@@ -63,7 +63,7 @@ namespace JamesOR.Edna.Player
 
         private void Start()
         {
-            m_camera = Camera.main;
+            m_camera = UnityEngine.Camera.main;
             m_motor = GetComponent<PlayerMotor>();
             Inventory = new Inventory();
         }
