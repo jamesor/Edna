@@ -105,7 +105,7 @@ namespace JamesOR.EdnaEditor
     }
 
     [CustomEditor(typeof(StringImporter))]
-    public class TestScriptableEditor : Editor
+    public class StringImporterEditor : Editor
     {
         public override void OnInspectorGUI()
         {
