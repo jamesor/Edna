@@ -4,14 +4,23 @@ using System.Linq;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine.UIElements;
+using UnityEditor;
+using JamesOR.Edna.DataContainers;
+using JamesOR.Edna.Utils;
+using UnityEngine.Localization;
 
 namespace JamesOR.EdnaEditor.Dialogue
 {
     public class DialogueGraphView : GraphView
     {
         public readonly Vector2 DefaultNodeSize = new Vector2(150, 200);
+        public float DefaultCommentBlockSize { get; internal set; }
+        public List<ExposedProperty> ExposedProperties { get; private set; } = new List<ExposedProperty>();
+        public Blackboard Blackboard;
 
-        public DialogueGraphView()
+        private NodeSearchWindow m_nodeSearchWindow;
+
+        public DialogueGraphView(EditorWindow editorWindow)
         {
             styleSheets.Add(Resources.Load<StyleSheet>("DialogueGraph"));
             SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
@@ -25,6 +34,14 @@ namespace JamesOR.EdnaEditor.Dialogue
             grid.StretchToParentSize();
 
             AddElement(GenerateEntryPointNode());
+            AddSearchWindow(editorWindow);
+        }
+
+        private void AddSearchWindow(EditorWindow editorWindow)
+        {
+            m_nodeSearchWindow = ScriptableObject.CreateInstance<NodeSearchWindow>();
+            m_nodeSearchWindow.Configure(editorWindow, this);
+            nodeCreationRequest = context => SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), m_nodeSearchWindow);
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -42,12 +59,12 @@ namespace JamesOR.EdnaEditor.Dialogue
             return compatiblePorts;
         }
 
-        public void CreateNode(string nodeName)
+        public void CreateNewDialogueNode(string nodeName, Vector2 position)
         {
-            AddElement(CreateDialogueNode(nodeName));
+            AddElement(CreateDialogueNode(nodeName, position));
         }
 
-        public DialogueNode CreateDialogueNode(string nodeName)
+        public DialogueNode CreateDialogueNode(string nodeName, Vector2 position)
         {
             var dialogueNode = new DialogueNode
             {
@@ -55,6 +72,8 @@ namespace JamesOR.EdnaEditor.Dialogue
                 DialogueText = nodeName,
                 GUID = Guid.NewGuid().ToString()
             };
+
+            dialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
 
             var inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
             inputPort.portName = "Input";
@@ -64,11 +83,65 @@ namespace JamesOR.EdnaEditor.Dialogue
             button.text = "New Choice";
             dialogueNode.titleContainer.Add(button);
 
+            var textField = new TextField(string.Empty);
+            textField.RegisterValueChangedCallback(evt => 
+            {
+                dialogueNode.DialogueText = evt.newValue;
+                dialogueNode.title = evt.newValue;
+            });
+            textField.SetValueWithoutNotify(dialogueNode.title);
+            dialogueNode.mainContainer.Add(textField);
+
             dialogueNode.RefreshExpandedState();
             dialogueNode.RefreshPorts();
-            dialogueNode.SetPosition(new Rect(Vector3.zero, DefaultNodeSize));
+            dialogueNode.SetPosition(new Rect(position, DefaultNodeSize));
             
             return dialogueNode;
+        }
+
+        public void ClearBlackboardAndExposedProperties()
+        {
+            ExposedProperties.Clear();
+            Blackboard.Clear();
+        }
+
+        public void AddPropertyToBlackboard(ExposedProperty exposedProperty)
+        {
+            List<string> existingNamesList = (from p in ExposedProperties select p.PropertyName).ToList();
+            var localPropertyName = StringUtils.IncrementName(exposedProperty.PropertyName, existingNamesList);
+            var localPropertyValue = exposedProperty.PropertyValue;
+
+            var property = new ExposedProperty
+            {
+                PropertyName = localPropertyName,
+                PropertyValue = localPropertyValue
+            };
+            ExposedProperties.Add(property);
+
+            var container = new VisualElement();
+            var blackboardField = new BlackboardField { text = property.PropertyName, typeText = "string" };
+            container.Add(blackboardField);
+
+            var propertyValueTextField = new TextField("Value:")
+            {
+                value = property.PropertyValue
+            };
+
+            propertyValueTextField.RegisterValueChangedCallback(evt =>
+            {
+                var changingPropertyIndex = ExposedProperties.FindIndex(x => x.PropertyName == property.PropertyName);
+                ExposedProperties[changingPropertyIndex].PropertyValue = evt.newValue;
+            });
+
+            var blackboardValueRow = new BlackboardRow(blackboardField, propertyValueTextField);
+            container.Add(blackboardValueRow);
+
+            Blackboard.Add(container);
+        }
+
+        public void CreateCommentBlock(Rect rect)
+        {
+            throw new NotImplementedException();
         }
 
         public void AddChoicePort(DialogueNode dialogueNode, string overriddenPortName = "")
@@ -122,6 +195,9 @@ namespace JamesOR.EdnaEditor.Dialogue
 
             var generatedPort = GeneratePort(node, Direction.Output);
             generatedPort.portName = "Next";
+
+            node.capabilities &= ~Capabilities.Movable;
+            node.capabilities &= ~Capabilities.Deletable;
 
             node.outputContainer.Add(generatedPort);
             node.RefreshExpandedState();

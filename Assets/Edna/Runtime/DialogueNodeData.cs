@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace JamesOR.Edna.Dialogue
 {

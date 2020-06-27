@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using JamesOR.Edna.DataContainers;
 using UnityEngine;
 
 namespace JamesOR.Edna.Dialogue
@@ -9,7 +10,6 @@ namespace JamesOR.Edna.Dialogue
     {
         public List<NodeLinkData> NodeLinks = new List<NodeLinkData>();
         public List<DialogueNodeData> DialogueNodeData = new List<DialogueNodeData>();
-        //public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
-        //public List<CommentBlockData> CommentBlockData = new List<CommentBlockData>();
+        public List<ExposedProperty> ExposedProperties = new List<ExposedProperty>();
     }
 }
