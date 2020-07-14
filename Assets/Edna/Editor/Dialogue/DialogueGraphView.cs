@@ -7,7 +7,6 @@ using UnityEngine.UIElements;
 using UnityEditor;
 using JamesOR.Edna.DataContainers;
 using JamesOR.Edna.Utils;
-using UnityEngine.Localization;
 
 namespace JamesOR.EdnaEditor.Dialogue
 {
@@ -72,8 +71,7 @@ namespace JamesOR.EdnaEditor.Dialogue
                 DialogueText = nodeName,
                 GUID = Guid.NewGuid().ToString()
             };
-
-            dialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("Node"));
+            dialogueNode.styleSheets.Add(Resources.Load<StyleSheet>("DialogueGraph"));
 
             var inputPort = GeneratePort(dialogueNode, Direction.Input, Port.Capacity.Multi);
             inputPort.portName = "Input";
@@ -147,6 +145,8 @@ namespace JamesOR.EdnaEditor.Dialogue
         public void AddChoicePort(DialogueNode dialogueNode, string overriddenPortName = "")
         {
             var generatedPort = GeneratePort(dialogueNode, Direction.Output);
+            generatedPort.styleSheets.Add(Resources.Load<StyleSheet>("DialogueGraph"));
+            generatedPort.AddToClassList("output-port");
 
             var oldLabel = generatedPort.contentContainer.Q<Label>("type");
             generatedPort.contentContainer.Remove(oldLabel);
@@ -162,6 +162,8 @@ namespace JamesOR.EdnaEditor.Dialogue
                 name = string.Empty,
                 value = choicePortName
             };
+            textField.AddToClassList("output-field");
+            textField.multiline = true;
             textField.RegisterValueChangedCallback(evt => generatedPort.portName = evt.newValue);
             generatedPort.contentContainer.Add(new Label("  "));
             generatedPort.contentContainer.Add(textField);
@@ -211,14 +213,12 @@ namespace JamesOR.EdnaEditor.Dialogue
         {
             var targetEdge = edges.ToList().Where(x => x.output.portName == generatedPort.portName && x.output.node == generatedPort.node);
 
-            if (!targetEdge.Any())
+            if (targetEdge.Any())
             {
-                return;
+                var edge = targetEdge.First();
+                edge.input.Disconnect(edge);
+                RemoveElement(edge);
             }
-
-            var edge = targetEdge.First();
-            edge.input.Disconnect(edge);
-            RemoveElement(targetEdge.First());
 
             dialogueNode.outputContainer.Remove(generatedPort);
             dialogueNode.RefreshExpandedState();

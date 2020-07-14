@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 using UnityEngine.UIElements;
 using UnityEditor.UIElements;
-using System;
 using UnityEditor.Experimental.GraphView;
 using JamesOR.Edna.DataContainers;
 using System.Linq;

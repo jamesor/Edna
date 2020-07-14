@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Edna/Scenes/EdnaDemo.unity
+    guid: ae6f535dcc1e00f4fa8b028001221a9b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 28edd9dd1f49bf741bf6be3df9c17ee2,
       type: 2}

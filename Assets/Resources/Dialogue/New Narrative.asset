@@ -13,19 +13,26 @@ MonoBehaviour:
   m_Name: New Narrative
   m_EditorClassIdentifier: 
   NodeLinks:
-  - BaseNodeGUID: 4dca7a48-9b6e-4197-9e9d-7d322d3712ad
+  - BaseNodeGUID: d11b2835-8aa6-4bb4-a886-27359714b2ea
     PortName: Next
-    TargetNodeGUID: e3ffe3bd-e077-4946-9bea-fbd74a02799a
-  - BaseNodeGUID: e3ffe3bd-e077-4946-9bea-fbd74a02799a
+    TargetNodeGUID: 40b4f17d-e59a-411c-bc74-fd5eebe80fe8
+  - BaseNodeGUID: b6e4099d-750a-4cd1-9798-d0a368bdd059
+    PortName: Choice 0
+    TargetNodeGUID: 0eab1e7b-414f-4620-b9a3-a51cba942933
+  - BaseNodeGUID: 40b4f17d-e59a-411c-bc74-fd5eebe80fe8
     PortName: Choice 1
-    TargetNodeGUID: 558e9e3e-1b1f-4aad-81bd-e9bc6f66de60
+    TargetNodeGUID: 0eab1e7b-414f-4620-b9a3-a51cba942933
+  - BaseNodeGUID: 40b4f17d-e59a-411c-bc74-fd5eebe80fe8
+    PortName: Choice 0
+    TargetNodeGUID: b6e4099d-750a-4cd1-9798-d0a368bdd059
   DialogueNodeData:
-  - NodeGUID: e3ffe3bd-e077-4946-9bea-fbd74a02799a
+  - NodeGUID: 40b4f17d-e59a-411c-bc74-fd5eebe80fe8
     DialogueText: Dialogue Node
-    Position: {x: 309, y: 135}
-  - NodeGUID: 558e9e3e-1b1f-4aad-81bd-e9bc6f66de60
+    Position: {x: 300, y: 138}
+  - NodeGUID: b6e4099d-750a-4cd1-9798-d0a368bdd059
     DialogueText: Dialogue Node
-    Position: {x: 679, y: 114}
-  ExposedProperties:
-  - PropertyName: dsfgdfgsdfg
-    PropertyValue: dfgdfg
+    Position: {x: 869, y: 41}
+  - NodeGUID: 0eab1e7b-414f-4620-b9a3-a51cba942933
+    DialogueText: Tfasdjfl sdjflkasdjf alsdkjf asldkfj asdlkf
+    Position: {x: 1388, y: 258}
+  ExposedProperties: []

@@ -35,11 +35,11 @@ namespace JamesOR.EdnaEditor.Dialogue
                 {
                     level = 2, userData = new DialogueNode()
                 },
-                new SearchTreeEntry(new GUIContent("Comment Block",m_indentationIcon))
-                {
-                    level = 1,
-                    userData = new Group()
-                }
+                //new SearchTreeEntry(new GUIContent("Comment Block",m_indentationIcon))
+                //{
+                //    level = 1,
+                //    userData = new Group()
+                //}
             };
 
             return tree;

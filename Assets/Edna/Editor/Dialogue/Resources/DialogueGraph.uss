@@ -4,3 +4,27 @@ GridBackground {
 	--thick-line-color: rgba(193,196,192,0.1);
 	--spacing: 10;
 }
+
+#title {
+	background-color: rgba(40, 120, 40, 1);
+
+}
+
+.dialogue-text-input {
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.output-field {
+	white-space: normal;
+	width: 300px;
+	min-height: 72px;
+}
+
+.output-field .unity-base-field__input {
+    -unity-font-style: italic;
+}
+
+.output-port {
+	height: auto;
+}
